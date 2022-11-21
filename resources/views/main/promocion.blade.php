@@ -68,7 +68,7 @@
 
 @section('contenido')
 
-<div class="container-fluid">
+{{-- <div class="container-fluid">
     <div class="row">
         <div class="col">
             <div class="owl-carousel banner owl-theme">
@@ -91,6 +91,38 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+<div class="owl-carousel banner owl-theme">
+    <div class="item">
+        <a href="{{ route('carta') }}">
+            <img src="{!! asset('assets/images/banner-mi-carcochita.jpg') !!}" class="img-fluid" alt="Green Shop" />
+        </a>
+    </div>
+    {{-- <div class="item">
+                    <img src="{!! asset('assets/images/index/slider1.jpg') !!}" class="img-fluid" alt="Green Shop" />
+                </div>
+                <div class="item">
+
+                    <img src="{!! asset('assets/images/index/slider2.jpg') !!}" class="img-fluid" alt="Green Shop" />
+                </div>
+                <div class="item">
+
+                    <img src="{!! asset('assets/images/index/slider3.jpg') !!}" class="img-fluid" alt="Green Shop " />
+                </div> --}}
+</div>
+
+
+<div class="row mx-0" style="background-color: #22376A">
+    <div class="col text-center">
+        <div class="my-3">
+            <h3 class="text-white satisfy">¡Haz tu pedido ahora!</h3>
+            <a href="{{ route('carta') }}" class="btn btn-danger">Carta <i class="fa fa-list-alt"
+                    aria-hidden="true"></i></a>
+        </div>
+
+    </div>
+
 </div>
 
 <!---- Polleria ------>
