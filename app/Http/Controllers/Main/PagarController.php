@@ -104,7 +104,7 @@ class PagarController extends Controller
 
         $store = array(
             "amount" => $total_izi . "00",
-            "currency" => "EUR",
+            "currency" => "PEN",
             "orderId" => uniqid("MyOrderId"),
             "customer" => array(
                 "email" => $email_pedido,
@@ -128,7 +128,8 @@ class PagarController extends Controller
         /* everything is fine, I extract the formToken */
         $formToken = $response["answer"]["formToken"];
 
-        $path = "http://localhost/laravel/liveware_test_laravel/helpers/izipay/paid.php";
+        $path = "https://asociaciondeagraviadosaelucoop.com/public_micarcochita/helpers/izipay/paid.php";
+
 
         /** ------- /1  Izipay ------------ */
 

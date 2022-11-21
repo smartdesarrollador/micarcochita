@@ -5,7 +5,7 @@
 @section('contenido_login_admin')
 
     <div class="login-page">
-        <div class="form" style="background-color: #D01317;">
+        <div class="form" style="background-color: #22376A;">
             <h5> <img width="70%" src="{{ asset('admin_assets/img/logoMain.png') }}"> </h5>
             <form class="login-form" method="post" action="{{ route('admin.script.validar_sesion') }}">
                 @csrf
