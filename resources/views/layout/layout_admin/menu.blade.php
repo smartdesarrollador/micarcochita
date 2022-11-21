@@ -4,7 +4,7 @@
 </audio>
 <div class="navbar-fixed black">
     <nav class="animated ">
-        <div class="nav-wrapper" style="background-color:#D01317;">
+        <div class="nav-wrapper" style="background-color:#22376A;">
             <div class="container">
                 <a href="./" class="brand-logo deep-orange-text logoWSFPC center-align">
                     <img class="logoWSFPCImagen" src="{{ asset('admin_assets/img/logoMain.png') }}" alt="">
@@ -38,7 +38,8 @@
                     <li><a class=" white-text capitalize" href="#!"><strong>Hola, {{ session('current_fullName') }}
                             </strong></a></li>
                     <li><a title="Cerrar Sesión" onclick="return confirm('Estas Seguro?');"
-                            class=" white-text capitalize" href="{{ route('admin.script.logout') }}"><strong><i class="material-icons">
+                            class=" white-text capitalize" href="{{ route('admin.script.logout') }}"><strong><i
+                                    class="material-icons">
                                     power_settings_new
                                 </i></strong></a></li>
 
@@ -94,7 +95,8 @@
     <li class="divider"></li>
 
 
-    <li class="center-align"><a href="{{ route('admin.script.logout') }}"><i class="material-icons">exit_to_app</i>Cerrar Sesión</a></li>
+    <li class="center-align"><a href="{{ route('admin.script.logout') }}"><i
+                class="material-icons">exit_to_app</i>Cerrar Sesión</a></li>
     <li class="divider"></li>
 
 </ul>

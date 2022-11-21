@@ -73,7 +73,7 @@ class HelperTestController extends Controller
         //$path = "http://localhost/liveware_test_laravel/helpers/izipay/";
 
         //oficina
-        $path = "http://localhost/laravel/liveware_test_laravel/helpers/izipay/";
+        $path = "https://asociaciondeagraviadosaelucoop.com/public_micarcochita/helpers/izipay/";
 
 
         return view("test.helper.izipay", ['client' => $client, 'formToken' => $formToken, 'path' => $path]);

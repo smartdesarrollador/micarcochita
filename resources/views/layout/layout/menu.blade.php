@@ -1,5 +1,5 @@
 <nav class="navbar  navbar-expand-lg pt-0 pb-0"
-    style="background:#D01317;border-bottom:3px solid #ffffff; position:sticky;top:0px;z-index:100;">
+    style="background:#ffffff;border-bottom:3px solid #22376A; position:sticky;top:0px;z-index:100;">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/images/logoMain.png') }}"
                 style="width:100px"></a>
@@ -10,7 +10,7 @@
         </button> -->
 
         <a href="pago.php" class="btn d-block d-sm-block  d-lg-none">
-            <span><i class="fa fa-shopping-cart " style="color:#ffffff;font-size:2rem" aria-hidden="true"></i></span>
+            <span><i class="fa fa-shopping-cart " style="color:#22376A;font-size:2rem" aria-hidden="true"></i></span>
 
 
         </a>
@@ -18,18 +18,18 @@
         <button class="btn d-block d-sm-block  d-lg-none" type="button" data-toggle="collapse"
             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span><i class="fas fa-bars" style="color:#ffffff;font-size:35px;"></i></span>
+            <span><i class="fas fa-bars" style="color:#22376A;font-size:35px;"></i></span>
         </button>
 
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a class=" nav-link" href="{{ url('/promociones') }}"
-                        style="color:aliceblue;font-size:20px;">
+                <li class="nav-item"><a class=" nav-link" href="{{ url('/') }}"
+                        style="color:#22376A;font-size:20px;">
                         Promociones</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="{{ url('/carta') }}"
-                        style="color:aliceblue;font-size:20px;">
+                        style="color:#22376A;font-size:20px;">
                         Carta</a>
                 </li>
 

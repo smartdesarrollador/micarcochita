@@ -176,8 +176,8 @@ Route::middleware([
 
 
 //--------- Main paginas----------
-Route::get('/', [InicioController::class, 'index'])->name('inicio');
-Route::get('/promociones', [PromocionesController::class, 'index']);
+Route::get('/inicio', [InicioController::class, 'index'])->name('inicio');
+Route::get('/', [PromocionesController::class, 'index']);
 Route::get('/detalle/{idProducto}', [DetalleController::class, 'index'])->name('detalle');
 Route::get('/carrito', [CarritoController::class, 'index'])->name('carrito');
 Route::get('/pagar', [PagarController::class, 'index'])->name('pagar');

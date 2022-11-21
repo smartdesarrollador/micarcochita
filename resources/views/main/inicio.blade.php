@@ -74,7 +74,7 @@
 <div class="owl-carousel banner owl-theme">
     <div class="item">
         <a href="{{ route('carta') }}">
-            <img src="{!! asset('assets/images/covid_richards.png') !!}" class="img-fluid" alt="Green Shop" />
+            <img src="{!! asset('assets/images/banner-mi-carcochita.jpg') !!}" class="img-fluid" alt="Green Shop" />
         </a>
     </div>
     {{-- <div class="item">
@@ -91,7 +91,7 @@
 </div>
 
 
-<div class="row mx-0" style="background-color: #000000">
+<div class="row mx-0" style="background-color: #22376A">
     <div class="col text-center">
         <div class="my-3">
             <h3 class="text-white satisfy">¡Haz tu pedido ahora!</h3>

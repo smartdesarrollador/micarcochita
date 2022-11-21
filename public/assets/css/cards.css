@@ -23,7 +23,7 @@
     color: #ffffff !important;
     margin-top: 20px;
     margin-bottom: 10px;
-    background-color: #D01317;
+    background-color: #22376A;
     border: 1px solid #000000;
     border-radius: 5px;
     padding: 10px;
@@ -31,7 +31,7 @@
 }
 
 .comprar-button:hover {
-    background-color: #D01317;
+    background-color: #22376A;
     color: #fff !important;
     transition: .5s;
     cursor: pointer;
