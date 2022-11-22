@@ -383,8 +383,19 @@ Route::get('/login-google', function () {
 Route::get('/google-callback', function () {
     $user = Socialite::driver('google')->user();
 
-    dd($user);
+    //dd($user);
     // $user->token
+
+    if ($user->token) {
+        session(['current_customer_idCliente' => $user->id]);
+        session(['current_customer_email' => strtolower($user->email)]);
+        session(['current_customer_nombre' => $user->name]);
+
+        session(['estado_cliente' => "true"]);
+        return redirect('/');
+    } else {
+        return "token invalido";
+    }
 });
 
 //---------- Test Sessiones -----------
