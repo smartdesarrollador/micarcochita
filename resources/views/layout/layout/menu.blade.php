@@ -126,7 +126,7 @@
                     </div>
                     <hr>
 
-                    <div class="row mb-3 ">
+                    {{-- <div class="row mb-3 ">
                         <div class="col text-center px-5 py-2">
 
                             <div id="gSignInWrapper">
@@ -140,7 +140,19 @@
                                 startApp();
                             </script>
                         </div>
-                    </div>
+                    </div> --}}
+                    <center>
+                        <a href="{{ url('/login-google') }}">
+                            <div class="google-btn">
+                                <div class="google-icon-wrapper">
+                                    <img class="google-icon"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                                </div>
+                                <p class="btn-text"><b>Ingresar con Google</b></p>
+                            </div>
+                        </a>
+                    </center>
+
 
                 </form>
                 <!-- End # Login Form -->

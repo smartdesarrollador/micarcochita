@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/navBar.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/loading.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/boton-google.css') }}">
 
 
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">

@@ -124,7 +124,7 @@ use App\Http\Controllers\Test\Helper\IzipayTestController;
 use App\Http\Controllers\Test\Cart\CartTestController;
 
 //------- Login Google -----
-//use Laravel\Socialite\Facades\Socialite;
+use Laravel\Socialite\Facades\Socialite;
 
 //-------- Test Sessiones ------
 use App\Http\Controllers\Test\Sesiones\SesionesTestController;
@@ -376,16 +376,27 @@ Route::get('/test/cart_action/{id}', [CartTestController::class, 'cartAction']);
 Route::get('/test/pago', [CartTestController::class, 'pago'])->name('test.cart.pago');
 
 //----------- Test Login Google ---------
-/* Route::get('/login-google', function () {
+Route::get('/login-google', function () {
     return Socialite::driver('google')->redirect();
 });
 
 Route::get('/google-callback', function () {
     $user = Socialite::driver('google')->user();
 
-    dd($user);
+    //dd($user);
     // $user->token
-}); */
+
+    if ($user->token) {
+        session(['current_customer_idCliente' => $user->id]);
+        session(['current_customer_email' => strtolower($user->email)]);
+        session(['current_customer_nombre' => $user->name]);
+
+        session(['estado_cliente' => "true"]);
+        return redirect('/');
+    } else {
+        return "token invalido";
+    }
+});
 
 //---------- Test Sessiones -----------
 Route::get('/sesion/crear', [SesionesTestController::class, 'crear_sesion']);
