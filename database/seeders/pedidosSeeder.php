@@ -46,7 +46,11 @@ class pedidosSeeder extends Seeder
             'pedidoProgramado' => null,
             'costoEnvioPagado' => 5.00,
             'idTienda' => 0,
-            'producto_gratis' => 'ture'
+            'producto_gratis' => 'ture',
+            'precio_con_descuento' => null,
+            'codigo_cupon' => null,
+            'estado_descuento' => 'false',
+
         ]);
     }
 }

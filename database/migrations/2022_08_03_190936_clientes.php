@@ -39,6 +39,7 @@ class Clientes extends Migration
             $table->string("distrito")->nullable();
             $table->string("latitud")->nullable();
             $table->string("longitud")->nullable();
+            $table->integer("store_id")->nullable();
 
             $table->timestamps();
         });
