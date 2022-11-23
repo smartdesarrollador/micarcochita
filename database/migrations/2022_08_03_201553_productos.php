@@ -23,7 +23,8 @@ class Productos extends Migration
             $table->unsignedBigInteger("idTipoProducto")->nullable();
             $table->foreign("idTipoProducto")->references("idTipoProducto")->on("tipoproducto")->onDelete("set null");
             $table->string("productoObservaciones")->nullable();
-            $table->integer("precioProducto")->nullable();
+            $table->float('precioProducto', 11, 2)->nullable();
+            $table->float('precioTachado', 11, 2)->nullable();
             $table->string("stock")->nullable();
             $table->string("estado")->nullable();
             $table->integer("posicion")->nullable();

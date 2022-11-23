@@ -41,6 +41,7 @@ class clientesSeeder extends Seeder
             'distrito' => null,
             'latitud' => '-12.0844639',
             'longitud' => "-77.0425295",
+            'store_id' => 1,
         ]);
     }
 }

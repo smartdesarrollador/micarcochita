@@ -20,6 +20,11 @@ class Tienda extends Migration
             $table->string("estado")->nullable();
             $table->string("acepta_pedidos")->nullable();
             $table->string("direccion_tienda")->nullable();
+            $table->string("cupon")->nullable();
+            $table->integer("descuento")->nullable();
+            $table->integer("cantidadTotal")->nullable();
+            $table->string("cupon_dos")->nullable();
+
             $table->timestamps();
         });
     }

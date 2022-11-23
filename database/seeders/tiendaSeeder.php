@@ -21,6 +21,11 @@ class tiendaSeeder extends Seeder
             'estado' => "ABIERTO",
             'acepta_pedidos' => 'TRUE',
             'direccion_tienda' => "Brigadier Pumacahua 2321",
+            'cupon' => 'ELEGIPCIO',
+            'descuento' => 20,
+            'cantidadTotal' => 0,
+            'cupon_dos' => 'AMOELEGIPCIO',
+
         ]);
     }
 }

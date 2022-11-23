@@ -28,7 +28,7 @@ class Pedidos extends Migration
             $table->foreign("idEstado")->references("idEstado")->on("estadopedido")->onDelete("set null");
 
             $table->string("pedidoObservaciones")->nullable();
-            $table->integer("precioTotal")->nullable();
+            $table->float('precioTotal', 11, 2)->nullable();
             $table->string("puntosGanados")->nullable();
             $table->string("last_four")->nullable();
             $table->string("card_number")->nullable();
@@ -52,6 +52,9 @@ class Pedidos extends Migration
             $table->decimal("costoEnvioPagado", 10, 2)->nullable();
             $table->integer("idTienda")->nullable();
             $table->string("producto_gratis")->nullable();
+            $table->float('precio_con_descuento', 11, 2)->nullable();
+            $table->string("codigo_cupon")->nullable();
+            $table->string("estado_descuento")->nullable();
 
             $table->timestamps();
         });
