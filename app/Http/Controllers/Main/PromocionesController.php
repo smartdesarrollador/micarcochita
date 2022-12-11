@@ -34,7 +34,7 @@ class PromocionesController extends Controller
 
         //dd($estadoTienda);
 
-        $url_img_produc = asset("");
+        $url_img_produc = url('/assets/imagenes/productos');
 
         //dd($url_img_produc);
 

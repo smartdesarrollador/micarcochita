@@ -52,6 +52,7 @@ use App\Http\Controllers\Main\Script\CheckoutController;
 
 use App\Http\Controllers\Main\Ajax\VerificarDireccionController;
 
+
 //----------- Admin --------------
 use App\Http\Controllers\Admin\InicioAdminController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -61,8 +62,7 @@ use App\Http\Controllers\Admin\ProductosAdminController;
 use App\Http\Controllers\Admin\UpdateProductAdminController;
 use App\Http\Controllers\Admin\AddProductAdminController;
 
-
-
+use \Illuminate\Support\Facades\Artisan;
 
 
 //---------- Admin Scripts --------------
@@ -226,6 +226,12 @@ Route::middleware(['autenticacion'])->group(function () {
     Route::post('/admin/updateproduct', [UpdateProductAdminController::class, 'UpdateProduct'])->name('admin.updateproduct.update');
     Route::get('/admin/addProduct', [AddProductAdminController::class, 'index'])->name('admin.addproduct.index');
     Route::post('/admin/addProduct/create', [AddProductAdminController::class, 'AddProduct'])->name('admin.addproduct.create');
+
+    //------------- Admin Generando acceso directo carpeta storage -----------------------------------------
+    Route::get('/generate_link_storage', function () {
+        Artisan::call('storage:link');
+        echo 'ok';
+    });
 
     //---------- Admin Scripts -------------
     Route::get('/admin/script/changestorestatus', [ChangeStoreStatusAdminController::class, 'ChangeStoreStatus'])->name('admin.script.changestorestatus');
@@ -432,6 +438,7 @@ Route::get('/no-autorizado', function () {
 Route::get('/test/file', [FileTestController::class, 'file'])->name('test.file');
 Route::post('/test/subir_imagen', [FileTestController::class, 'subir_imagen'])->name('test.subir_imagen');
 
+//------------- Test sesiones ----------------------
 Route::get('/crear_sesion', function () {
 
     session(['valor_3' => 'contenido nueva sesion']);

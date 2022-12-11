@@ -20,12 +20,25 @@ class tiendaSeeder extends Seeder
             'CostoDelivery' => 5,
             'estado' => "ABIERTO",
             'acepta_pedidos' => 'TRUE',
-            'direccion_tienda' => "Brigadier Pumacahua 2321",
+            'direccion_tienda' => "Julio Cesar Tello 886 - Lince",
             'cupon' => 'ELEGIPCIO',
             'descuento' => 20,
             'cantidadTotal' => 0,
             'cupon_dos' => 'AMOELEGIPCIO',
 
         ]);
+
+        /* DB::table('tienda')->insert([
+            'idTienda' => 2,
+            'CostoDelivery' => 0,
+            'estado' => "CERRADO",
+            'acepta_pedidos' => 'TRUE',
+            'direccion_tienda' => "Av. El Polo 121 - Surco",
+            'cupon' => 'ELEGIPCIO',
+            'descuento' => 20,
+            'cantidadTotal' => 0,
+            'cupon_dos' => 'AMOELEGIPCIO',
+
+        ]); */
     }
 }

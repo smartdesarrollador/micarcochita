@@ -21,12 +21,19 @@ class FileTestController extends Controller
             'file' => 'required|image|max:2048'
         ]);
 
-        //return $request->all();
-
-        $imagenes = $request->file('file')->store('public/test');
+        /* $imagenes = $request->file('file')->store('public/test');
 
         $url = Storage::url($imagenes);
 
-        return $url;
+        return $url; */
+
+        $img = $request->file('file');
+        $ext = $img->getClientOriginalExtension();
+        $name = time() . '.' . $ext;
+        $path = public_path('\img\uploads');
+        $img->move($path, $name);
+        /*   User::where('id', $user->id)->update([
+            'image' => $name
+        ]); */
     }
 }

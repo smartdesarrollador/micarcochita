@@ -33,11 +33,16 @@ class AddProductAdminController extends Controller
 
         if ($request->input('action') == 'submit') {
 
-            $imagen = $request->file('foto')->store('public/imagenes/productos');
-
+            /* $imagen = $request->file('foto')->store('public/imagenes/productos');
             $url = Storage::url($imagen);
+            $foto = $url; */
 
-            $foto = $url;
+            $img = $request->file('foto');
+            $ext = $img->getClientOriginalExtension();
+            $name_img = time() . '.' . $ext;
+            $path = public_path('assets\imagenes\productos');
+            $img->move($path, $name_img);
+
             $nombreProducto = trim($request->input('nombreProducto'));
             $descripcionProducto = trim($request->input('descripcionProducto'));
             $tipoProducto = $request->input('tipoProducto');
@@ -49,7 +54,7 @@ class AddProductAdminController extends Controller
             $stock = "YES";
             $estado = "ACTIVO";
 
-            $affectedRows = $objProducto->addNewProducto($nombreProducto, $descripcionProducto, $foto, $tipoProducto, $precioProducto, $stock, $estado, $puntosProducto, $storeId);
+            $affectedRows = $objProducto->addNewProducto($nombreProducto, $descripcionProducto, $name_img, $tipoProducto, $precioProducto, $stock, $estado, $puntosProducto, $storeId);
             if ($affectedRows > 0) {
                 return redirect()->route('admin.productos');
                 //header('location: https://operaciones.carbonybrasas.pe/productos?code=success');
